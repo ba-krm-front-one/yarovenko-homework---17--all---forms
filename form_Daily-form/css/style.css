@@ -1,0 +1,236 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: baseline;
+    background-image: linear-gradient(29deg, #ff512f 0%, #dd2476 100%);
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    max-width: 460px;
+    min-width: 200px;
+    height: 470px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 30px 31px;
+}
+
+                        /*---------HEADER---------*/
+
+.ha-title {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 334px;
+    height: 26px;
+    align-items: center;
+    margin: 0;
+}
+.ha-text, .fo-text {        /*style fo footer text too*/
+    font-family: "Arial Regular", sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+    color: #7a7b7f;
+}
+.ha-text {
+    font-size: 13px;
+    margin-top: 16px;
+    max-width: 395px;
+}
+.ha-text--link, .fo-text--link { /*style fo footer text too*/
+    color: #ea355a;
+    text-decoration: none;
+}
+.ha-text--link:hover, .fo-text--link:hover { /*style fo footer text too*/
+    text-decoration: underline;
+}
+.ha-title h1 {
+    max-width: 300px;
+    height: 22px;
+    color: #1b1c1d;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 20px;
+    padding-left: 10px;
+    font-family: "Arial Bold", sans-serif;
+}
+.ha-title img {
+    width: 24px;
+    height: 24px;
+}
+                        /*---------end HEADER---------*/
+
+                        /*---------styles for FORM---------*/
+.fa-contact-form {
+    margin-top: 34px;
+    flex-wrap: wrap;
+}
+
+.fa-contact-form ul {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fa-contact-form li {
+    padding-bottom: 15px;
+}
+.fa-contact-form input {
+    padding-left: 14px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    border: none;
+}
+.fa-contact-form li:nth-child(3) input, li:nth-child(2) input {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+}
+.fa-contact-form li:first-child div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 130px;
+}
+
+.fa-contact-form li:first-child input {
+    flex-grow: 1;
+    max-width: 193px;
+    min-width: 50px;
+}
+
+.fa-contact-form input:focus {
+    background: #fff;
+    border: 1px solid #555;
+    box-shadow: 0 0 3px #ccc, 0 6px 15px #eee inset;
+}
+.fa-contact-form input:focus {
+    padding: 10px;
+    -webkit-transition: padding .25s;
+    transition: padding .25s;
+}
+
+/* Button Style */
+.fa-sing-in {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    font-family: "Arial Bold", sans-serif;
+}
+.fa-sing-in {
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    background-color: #ea355a;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 3px 0 #bd1962;
+    }
+
+.fa-sing-in:hover {
+    text-shadow: 0 -1px 0 #396715;
+    opacity: .85;
+    cursor: pointer;
+}
+
+.fa-sing-in:active {
+    opacity: 1;
+    transition-duration: 0.1s;
+    transition-property: transform;
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+    text-shadow: none;
+}
+/* end Button Style */
+
+/*  Little check for correct input*/
+.fa-contact-form input:focus:invalid {
+    background: #fff url(../assets/warning.svg) no-repeat 98% center;
+    background-size: 15px 15px;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
+
+.fa-contact-form input:required:valid{
+    background: #fff url(../assets/checked.svg) no-repeat 98% center;
+    background-size: 15px 15px;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+/*---need write check for password, correct mail and Quantity of text label
+(maybe l write it in future...) or check it in javaScript*/
+/*  End check for correct input*/
+
+/*---start some style for placeholder ----*/
+:-moz-placeholder {
+    font-family: "Arial Regular", sans-serif;
+    font-weight: 400;
+    color: #7a7b7f;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+::-webkit-input-placeholder {
+    font-family: "Arial Regular", sans-serif;
+    color: #7a7b7f;
+    font-size: 14px;
+    line-height: 20px;
+}
+input::-webkit-input-placeholder {
+    opacity: 1; transition: opacity 0.3s ease;
+}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.6s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.6s ease;}
+
+/*--------end placeholder style----*/
+                        /*---------end styles for FORM---------*/
+
+                    /*---------- FOOTER style--------------*/
+.fo-text {
+    font-size: 12px;
+}
+
+.fo-footer-content {
+    margin-top: 12px;
+}
+                    /*---------- end FOOTER style--------------*/
+
+/*---------- some modification for little width screen -------------*/
+@media screen and (max-width: 300px) {
+
+    .fa-contact-form {
+        margin-top: 14px;
+        transition-property: margin-top;
+        transition-duration: 0.5s;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+}
+/*---------- end modification for little width screen -------------*/

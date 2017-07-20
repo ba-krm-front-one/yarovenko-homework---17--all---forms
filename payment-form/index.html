@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment form</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="keywords" content="account, name, form,latter, PayPal, VISA, MASTERCARD">
+    <meta name="description" content="account, name, form, pay, PayPal">
+    <link rel="shortcut icon" href="assets/credit_card.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+</head>
+<body>
+
+<main>
+    <header>
+        <div class="ha-man-fio">
+            <output name="user-name">Harold Finch</output><!---поле для вывода информации с какой то другой формы---->
+            <p>Your Total</p>
+        </div>
+        <output name="value">$88</output><!---поле для вывода информации с какой то другой формы---->
+    </header>
+    <form class="fa-form-payment" action="#" method="post">
+        <label for="card_number">Credit card number</label> <input type="text" id="card_number" required />
+        <label>Expiration date</label>
+        <section class="fa-select-block">
+            <div class="fa-select-block__item">
+                <select name="card_month" title="card_month" required>
+                    <option value="">Month</option>
+                    <option value="">Januery</option>
+                    <option value="">February</option>
+                    <option value="">March</option>
+                    <option value="">April</option>
+                    <option value="">May</option>
+                    <option value="">June</option>
+                    <option value="">July</option>
+                    <option value="">August</option>
+                    <option value="">September</option>
+                    <option value="">October</option>
+                    <option value="">November</option>
+                    <option value="">December</option>
+                 </select>
+            </div>
+            <div class="fa-select-block__item">
+                <select name="card_year" title="card_year" required>
+                    <option value="">Year</option>
+                    <option value="">2015</option>
+                    <option value="">2016</option>
+                    <option value="">2017</option>
+                    <option value="">2018</option>
+                    <option value="">2019</option>
+                    <option value="">2020</option>
+                    <option value="">2021</option>
+                </select>
+            </div>
+        </section>
+        <label for="cvv">CVV</label>
+        <div class="fa-cvv-code">
+            <input type="text" id="cvv" required />
+            <p>3 or 4 digits - view example</p>
+        </div>
+        <button>Pay</button>
+    </form>
+    <footer>
+        <a href="#">Cencel order</a>
+    </footer>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: baseline;
+    background-color: #bac5db;
+}
+
+main {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    max-width: 666px;
+    min-width: 350px;
+    height: 383px;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    box-shadow: 0 26px 49px rgba(35, 70, 133, 0.28);
+    border-radius: 24px;
+    background-color: #353a45;
+    font-family: Lato, sans-serif;
+    padding: 0 60px;
+}
+
+.fa-logo {
+    width: 92px;
+    height: 92px;
+    position: absolute;
+    top: -45px;
+    border-radius: 50%;
+    box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.13);
+}
+
+.fa-close {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 3px solid #4d5975;
+    background-color: rgba(232, 232, 232, 0);
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.fa-close:hover {
+    background-color: rgba(178, 34, 34, 0.6);
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 83px;
+}
+
+/* ----------- HEADER----------------*/
+h1 {
+    max-width: 238px;
+    height: 36px;
+    color: #538fff;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 0 auto;
+}
+
+h2 {
+    max-width: 475px;
+    height: 21px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    margin-top: 31px;
+}
+
+/* ----------- end HEADER----------------*/
+
+/* -----------------INPUT FORM------------------*/
+.fa-form {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.fa-form input {
+    flex-grow: 1;
+    max-width: 371px;
+    height: 52px;
+    box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    border: 1px solid #c4c4c4;
+    background-color: #ffffff;
+    padding-left: 18px;
+
+}
+
+.fa-form input:focus {
+    background: #fff;
+    border: 1px solid #555;
+    box-shadow: 0 0 3px #ccc, 0 6px 15px #eee inset;
+    font-size: 18px;
+    color: #538fff;
+}
+
+.fa-form input:focus {
+    padding: 10px;
+    -webkit-transition: padding .25s;
+    transition: padding .25s;
+}
+
+/*  Little check for correct input*/
+.fa-form input:focus:invalid {
+    background: #fff url(../assets/warning.svg) no-repeat 98% center;
+    background-size: 25px 25px;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
+
+.fa-form input:required:valid {
+    background: #fff url(../assets/checked.svg) no-repeat 98% center;
+    background-size: 25px 25px;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
+/*---start some style for placeholder ----*/
+:-moz-placeholder {
+    max-width: 164px;
+    height: 22px;
+    color: #a9a9a9;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    font-family: Lato, sans-serif;
+}
+
+::-webkit-input-placeholder {
+    max-width: 164px;
+    height: 22px;
+    color: #a9a9a9;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    font-family: Lato, sans-serif;
+}
+
+input::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+input:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+/*--------end placeholder style----*/
+
+/* Button Style */
+.fa-sing-in {
+    width: 100%;
+    max-width: 161px;
+    height: 52px;
+    border-radius: 10px;
+    background-color: #538fff;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    border: none;
+}
+
+.fa-sing-in {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 29px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.fa-sing-in:hover {
+    text-shadow: 0 -1px 0 #396715;
+    opacity: .85;
+    cursor: pointer;
+}
+
+.fa-sing-in:active {
+    opacity: 1;
+    transition-duration: 0.1s;
+    transition-property: transform;
+    -webkit-transform: translateY(1px);
+    -moz-transform: translateY(1px);
+    transform: translateY(1px);
+    text-shadow: none;
+}
+
+/* end Button Style */
+/* -----------------end INPUT------------------*/
+
+/*-----------------------FOOTER------------------------*/
+.fo-spam-massege {
+    margin-top: 37px;
+    max-width: 340px;
+    height: 19px;
+    color: #787d87;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 34px;
+}
+
+/*----------------------- end FOOTER------------------------*/
+
+/*---------- some modification for little width screen -------------*/
+@media screen and (max-width: 460px) {
+
+    .main-container {
+        margin-top: 45px;
+        transition-property: margin-top;
+        transition-duration: 0.5s;
+    }
+
+    .fa-form {
+        margin-top: 60px;
+    }
+
+    .fo-spam-massege {
+        margin-top: 7px;
+        line-height: 25px;
+    }
+
+    h2 {
+        line-height: 25px;
+    }
+}
+
+/*---------- end modification for little width screen -------------*/

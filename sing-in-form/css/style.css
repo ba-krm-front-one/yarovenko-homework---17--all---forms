@@ -1,0 +1,255 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+a, button, .fa-checkbox {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: baseline;
+    background-color: #e5eeee;
+}
+
+main {
+    font-family: Quicksand, sans-serif;
+    position: relative;
+    margin: auto;
+    max-width: 400px;
+    min-width: 200px;
+    height: 496px;
+    box-shadow: 0 0 20px rgba(2, 41, 120, 0.1);
+    background-size: 100% 100%;
+    width: 100%;
+    background: linear-gradient(32deg, rgba(48, 35, 174, 0.9) 10%, rgba(200, 109, 215, 0.8) 100%), url(../assets/background-img_2.png);
+    background-size: 100% 100%;
+    padding-top: 52px;
+}
+
+.main-container, form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.main-container {
+    margin: 0 auto;
+    max-width: 260px;
+}
+
+                            /*--------------------HEADER---------------------*/
+.ha-header {
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.ha-header a {
+    color: #fbf6e4;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.ha-header a:hover {
+    border-bottom: 2px solid #e66a64;
+}
+
+.ha-header p:first-child {
+    margin-right: 26px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #e66a64;
+}
+
+                        /*--------------------end HEADER------------------------*/
+
+                        /*-------------------------MAIN form--------------------*/
+.fa-form-content {
+    height: 291px;
+    margin-top: 33px;
+}
+
+.fa-form-content label {
+    margin-bottom: 11px;
+    margin-top: 18px;
+    color: #fbf6e4;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/*---------start styles for input---------*/
+.fa-form-content input {
+    padding-left: 14px;
+    height: 42px;
+    border-radius: 4px;
+    background: none;
+    border: 2px solid rgba(191, 185, 204, 0.34);
+}
+
+.fa-checkbox-form {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    height: 16px;
+    width: 100%;
+    padding: 0;
+    margin-top: 18px;
+}
+
+.fa-checkbox__text {
+    width: 119px;
+    height: 13px;
+    color: #fbf6e4;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ---------Checkbox styling---------- */
+/* Скрываем реальный чекбокс */
+.fa-checkbox__input {
+    display: none;
+}
+
+/* Задаем внешний вид для кастомного чекбокса.*/
+.fa-checkbox__check {
+    position: relative; /* задаем, чтобы абсолютным образом позиционировать псевдоэлемент внютри кастомного чекбокса*/
+    width: 16px; /* задаем ширину */
+    height: 16px; /* задаем высоту */
+    background: #23ae92;
+}
+
+/* Кастомный чекбокс и лейбл центрируем по вертикали.
+Если это не требуется, то можно убрать свойство
+vertical-align: middle, но свойство display: inline-block
+обязательно должно быть */
+.fa-checkbox__check,
+.fa-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Если реальный чекбокс отмечен, то добавляем данный признак и к кастомному чекбоксу  */
+.fa-checkbox__input:checked + .fa-checkbox__check::before {
+    content: ""; /* Добавляем псевдоэлемент */
+    display: block; /* Делаем его блочным элементом */
+    position: absolute; /* Позиционируем его абсолютным образом */
+
+    /* Задаем расстояние от верхней, правой, нижней и левой границы */
+    top: 3px;
+    right: 2px;
+    bottom: 2px;
+    left: 3px;
+    background: url("../assets/checked_1.svg") no-repeat; /* Добавляем фон. Если требуется, можно поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+    background-size: 10px 10px;
+}
+/* ---------end Checkbox styling---------- */
+
+.fa-form-content input:focus {
+    color: #ffffff;
+    font-weight: 700;
+    padding-left: 10px;
+    -webkit-transition: padding .25s;
+    transition: padding .25s;
+}
+/*---------end styles for input---------*/
+
+/*------- Little check for correct input------*/
+.fa-form-content input:focus:invalid {
+    background: rgba(191, 185, 204, 0.54) url(../assets/warning.svg) no-repeat 98% center;
+    background-size: 15px 15px;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
+
+.fa-form-content input:required:valid {
+    background: rgba(191, 185, 204, 0.54) url(../assets/checked.svg) no-repeat 98% center;
+    background-size: 15px 15px;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+/*---need write check for password and Quantity of text label
+(maybe l write it in future...) or check it in javaScript*/
+/* -------- End check for correct input---------*/
+
+/*----- Button Style----- */
+button {
+    max-width: 100%;
+    height: 42px;
+    background-color: #23ae92;
+    border: none;
+    margin-top: 41px;
+    color: #fbf6e4;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+button:hover {
+    text-shadow: 0 -1px 0 #396715;
+    opacity: .85;
+}
+
+button:active {
+    opacity: 1;
+    transition-duration: 0.1s;
+    transition-property: transform;
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+    text-shadow: none;
+}
+
+/*-----end Button Style----- */
+                    /*-------------------------end MAIN form--------------------*/
+
+                        /*-------------------------FOOTER--------------------*/
+.fo-footer {
+    margin-top: 33px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fo-footer a {
+    height: 12px;
+    color: #b9b9cc;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.fo-footer p {
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba(150, 193, 218, 0.15);
+}
+
+                        /*-------------------------end FOOTER--------------------*/
+.fa-shadowbox {
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 123px;
+    opacity: 0.91;
+    z-index: -1;
+    box-shadow: 0 23px 37px -1px #494949;
+}

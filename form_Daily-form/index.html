@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <meta name="keywords" content="account, name, form">
+    <meta name="description" content="account, name, form">
+    <link rel="shortcut icon" href="assets/favicon.png"/>
+</head>
+<body>
+<main class="container">
+    <header>
+        <div class="ha-title">
+            <img src="assets/logotype.svg" alt="logotype">
+            <h1>Create your free account</h1>
+        </div>
+        <p class="ha-text">Come and join our cool and amazing community, fill in your details
+            to get started. Already have an account? <a href="#" class="ha-text--link">Log in.</a></p>
+    </header>
+    <form class="fa-contact-form" action="#" method="post" name="sing-in-form">
+        <ul>
+            <li>
+                <div>
+                    <input type="text" name="first-name" id="first-name" placeholder="First name" required/>
+                    <label for="first-name"></label>
+                    <!--label did'n use,put in here because you said that input need label-->
+                    <input type="text" name="last-name" id="last-name" placeholder="Last name" required/>
+                    <label for="last-name"></label>
+                    <!--label did'n use,put in here because you said that input need label-->
+                </div>
+            </li>
+            <li>
+                <input type="email" name="email" id="email" placeholder="Email address" required/>
+                <label for="email"></label><!--label did'n use,put in here because you said that input need label-->
+            </li>
+            <li>
+                <input type="password" name="password" id="password" placeholder="Password" required/>
+                <label for="password"></label><!--label did'n use,put in here because you said that input need label-->
+            </li>
+            <li>
+                <button class="fa-sing-in">Sign up for free</button>
+            </li>
+        </ul>
+    </form>
+    <footer class="fo-footer-content">
+        <p class="fo-text">By clicking on “Sign up for free”, you agree to the <a href="#" class="fo-text--link">Terms
+            of Service</a> and <wbr/>the <a href="#" class="fo-text--link"> Privacy Policy</a></p>
+    </footer>
+</main>
+</body>
+</html>
